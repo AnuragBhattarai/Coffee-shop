@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div id="background">
+    </div>
+    <header>
+        <a href="#broski">Our coffee</a>
+        <a href="">About</a>
+        <a href="#nav">contact</a>
+    </header>
+    <div id="About">
+        <h1>Kale ko coffee</h1>
+        <h2>Welcome to one of the best coffee place you will ever visit </h2>
+    </dv>
+    <div id="discription">
+        <a href=""></a>
+        <img src="Cappuccino_at_Sightglass_Coffee.jpg">
+    </div>
+    <section id="ourcoffee">
+        <div id="text1">
+            <h1 id="broski">
+                Here are our coffees
+            </h1>
+
+        </div>
+        <div id="coffes">
+        <a href=""><img src="Latte-Art-066s.webp"><p>latte rs-150</p></a>
+        <a href=""><img src="Cappuccino-in-white-cup-on-a-saucer.jpg"><p>cappucino rs-200</p></a>
+        <a href=""><img src="Cafe Latte.jpg.jpeg"><p>Coffee rs-230</p></a>
+        <a href=""><img src="BlackCoffee4-500x500.jpg"><p>Blackcoffe rs-250</p></a>
+    </div>
+    </section>
+    <div id="text">
+        <h1><span>Ordering</span> will be online in</h1>
+    </div>
+    <div id="counter">
+        <div >
+            <p id="days">00</p>
+            <span>Days</span>
+        </div>
+        <div >
+            <p id="hours">00</p>
+            <span>Hours</span>
+        </div>
+        <div>
+            <p id="minutes">00</p>
+            <span>minutes</span>
+        </div>
+        <div>
+            <p id="seconds">00</p>
+            <span>seconds</span>
+        </div>
+    </div>
+    <script>
+        var countDownDate = new Date("Oct 20, 2023 00:00:00").getTime();
+        var x = setInterval(function(){
+            var now =new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24))
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+        },1000);
+    </script>
+
+
+    <div class="container">
+		<div class="contact-box">
+			<div class="left"></div>
+			<div class="right">
+				<h2>Contact Us</h2>
+				<input type="text" class="field" placeholder="Your Name">
+				<input type="text" class="field" placeholder="Your Email">
+				<input type="text" class="field" placeholder="Phone">
+				<textarea placeholder="Message" class="field"></textarea>
+				<button class="btn">Send</button>
+                <div id="nav"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
